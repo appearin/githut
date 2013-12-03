@@ -1,0 +1,277 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Githut</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="main-header">
+            <p class="exampletext">Appear.in API example app #2</p>
+            <h1>Githut</h1>
+        </header>
+        <div class="main">
+
+
+
+<h2>Pull request #591</h2>
+<p>Hash: <em class="hash"></em></p>
+
+<div class="codeblock">
+    <header>
+        <p class="language">javascript</p>
+        <p>/scripts/main.js</p>
+    </header>
+<code>$(function () {
+    window.isAppearinCompatible(function (result) {
+        if(result === true) {
+            $('#create-room-button').removeAttr('disabled').text('Create a room');
+        }
+        else {
+            $('#create-room-button').text('Browser unsupported :(');
+        }
+    }, function (error) {
+        console.log(error);
+    });
+
+    var generateRoomName = function () {
+        function randomString(length, chars) {
+            var result = '';
+            for (var i = length; i > 0; --i) result += chars[Math.round(Math.random() * (chars.length - 1))];
+            return result;
+        }
+
+        return randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+    }
+});
+</code>
+</div>
+
+    <div class="comments">
+        <h2>Comments</h2>
+            <article class="comment">
+                <img src="http://placehold.it/64x64" alt="" class="profile-image">
+                <p class="comment-body">Wow, this is amazing!</p>
+                <p class="signature">Smitty Werbenjagermanjensen <strong>2 hours ago</strong></p>
+            </article>
+
+            <article class="comment">
+                <img src="http://placehold.it/64x64" alt="" class="profile-image">
+                <p class="comment-body">Yeah, I know! I borrowed most of it from <a href="http://stackoverflow.com/questions/10726909/random-alpha-numeric-string-in-javascript/10727155#10727155">this Stackoverflow post</a> though.</p>
+                <p class="signature">Annie Edison <strong>34 minutes ago</strong></p>
+            </article>
+
+            <article class="comment">
+                <img src="http://placehold.it/64x64" alt="" class="profile-image">
+                <p class="comment-body">:cake</p>
+                <p class="signature">William Shakespeare <strong>20 minutes ago</strong></p>
+            </article>
+    </div>
+
+
+    <div class="watchers">
+        <h2>Watchers</h2>
+        <img src="http://api.randomuser.me/0.2/portraits/women/28.jpg" height="64" width="64" alt="">
+        <img src="http://api.randomuser.me/0.2/portraits/men/38.jpg" height="64" width="64" alt="">
+        <img src="http://api.randomuser.me/0.2/portraits/women/2.jpg" height="64" width="64" alt="">
+
+    </div>
+
+
+            <h2>Talk live about the pull request</h2>
+
+            <div id="appearin-loader">
+                <header>
+                    <p>appear.in/<span class="hash"></span></p>
+                </header>
+                
+                <div class="appearin-wrapper">
+                    <div class="loader-text-wrapper">
+                        <p id="loader-text">Loading...</p>
+                    </div>
+                    <svg class="logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve" height="100%" width="100%">
+        
+                    <path class="secondary-color" d="M792.525,595.011c0,21.416-17.394,38.768-38.851,38.768H230.521c-21.456,0-38.847-17.352-38.847-38.768 V237.667c0-21.409,17.391-38.762,38.847-38.762h523.154c21.457,0,38.851,17.353,38.851,38.762V595.011L792.525,595.011z"/>
+                    
+                    <polygon class="primary-color" points="512.722,849.071 181.011,616.382 512.722,616.382 "/>
+                    
+                    <path class="shadow" d="M700.339,296.158c-1.905,3.526-5.475,6.117-10.715,6.117c-3.086,0-5.591-0.896-7.522-2.352 c-1.022,26.678-3.789,52.995-4.479,79.789c-0.884,34.221-0.893,68.298-2.451,102.506c-2.289,50.095-5.613,101.028-4.984,151.561 h105.377c9.369,0,16.962-14.078,16.962-31.443V453.256L700.339,296.158z"/>
+                    
+                    <path class="primary-color" d="M712.5,682.724c0,21.548-17.464,39.008-39.009,39.008H148.197c-21.542,0-39.007-17.459-39.007-39.008 v-359.59c0-21.542,17.464-39.007,39.007-39.007h525.294c21.545,0,39.009,17.464,39.009,39.007V682.724z"/>
+                    
+                    <g enable-background="new">
+                        <path class="a-shape" d="M460.797,407.878h46.57v200.699h-46.57V587.56c-19.096,17.859-39.634,26.787-61.611,26.787 c-27.75,0-50.69-10.026-68.823-30.084c-17.998-20.468-26.994-46.019-26.994-76.653c0-30.085,8.996-55.152,26.994-75.211 c17.995-20.056,40.522-30.085,67.587-30.085c23.352,0,44.302,9.617,62.847,28.849V407.878z M350.763,507.609 c0,19.234,5.151,34.895,15.454,46.98c10.577,12.229,23.903,18.34,39.975,18.34c17.17,0,31.044-5.905,41.624-17.722 c10.577-12.225,15.866-27.746,15.866-46.568c0-18.819-5.29-34.341-15.866-46.569c-10.58-11.951-24.315-17.927-41.211-17.927 c-15.937,0-29.26,6.047-39.975,18.133C356.05,474.505,350.763,489.614,350.763,507.609z"/>
+                    </g>
+                    
+                    <path class="secondary-color" d="M905.132,207.367c0-3.85-2.192-4.739-4.874-1.976l-61.545,63.432c-2.681,2.763-4.874,8.174-4.874,12.024 v274.276c0,3.85,2.193,9.261,4.874,12.023l61.545,63.435c2.682,2.764,4.874,1.874,4.874-1.976V207.367z"/>
+                </svg>
+                </div>
+            </div>
+            
+
+
+
+
+
+
+
+
+
+
+<div class="codeblock readme">
+    <header>
+        <p class="language">markdown</p>
+        <p>/README.md</p>
+    </header>
+<code># README
+
+This is an example of how a site could be using an embedded version of appear.in. 
+
+
+
+While creating a webRTC solution is something that anybody can create, creating a stable and available
+service is a non-trivial task. Also, we want the world to use and enjoy the wonder that is appear.in,
+pandering to the developer community is something that we want tpursue. And here you go - an API.
+
+We do not probicde a white-label solution right now.
+
+
+Everything you see here is 
+
+
+
+
+This site has been created as an excersise to explore what is possible to create with appear.in now,
+what APIs that is needed and what APIs we are able to provide. And what we found is that it did actually
+work more or less out-of-the-box.
+The only API that is in use here
+
+
+
+...due to the fact that to create a room, one only needs to ...
+
+## How to use
+
+
+
+
+## Embedding appear.in
+Embedding of appear.in
+
+
+The request to access the camera and microphone comes from appear.in, meaning that if you ever has
+permitted appear.in to access your camera, no other action is needed from the user on any site that
+embeds appear.in rooms.
+
+
+
+## About this thing in particular
+
+First, this thing asks our API about the capabilites of the client browser. This API embeds a hidden
+iframe that puts the browser through a battery of tests which is then made available to your code
+through a standard callback function. If the browser is supported
+
+The room name is generated based on the checksum hash of the git commit. The observant reader will
+notice that there is no guarantee that the room is available,
+ but due to the large number of available
+hashes (40 hexadecimal characters) appearing in the same room as anyone unintended is (for now)
+statistically impossible. You can, of course, prepend the hash with project name, etc. to make it even
+more improbable.
+
+
+
+### The loader
+
+
+Thing is, people generally don't want their camera to start recording the instant you enter a web site,
+especially when considering that your audio and video is broadcasted to everyone else in the room. Who
+haven't read a pull request 
+
+By having a clear pre-loader which you activate by clicking on it, this issue is mitigated, and the
+camera is effectively turned on only when the user explicitly wants to be seen. Whether or not this is
+the preferred method of using an embedded version of appear.in is still to be decided, and the loader
+is this not something that we require to be in place. We don't provide a ready-to-use preloader that can
+be used out of the box either, but this is something that we want to create soon. For now, however,
+either use what we provide here if you want, or implement your own as you see fit.
+
+
+## Useful stuff
+
+* follow a room when following a ticket
+* how many people are in this room now?
+* who is in the room now?
+* reserve a room programatically
+* lock a room programatically
+* external chat
+
+
+
+
+## How this app could be used
+
+...and would it not be a little helpful if there was a way for us send a browser notification to a list
+of room watchers? (hint hint)
+
+
+
+
+## Licensing
+For now, please do make use of whatever you want. While we cannot at this point guarantee how the API
+will look like and behave, what is used here will most probably remain publicly available.
+
+register an email?
+
+...this is a developer preview, and we have not figured out how to best find a solution that works out
+well for us, the developers and the end users.
+
+
+
+</code>
+</div>
+
+
+
+
+
+
+        </div>
+
+
+
+        <script src="http://iswebrtcready.appear.in/api.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <script>
+        $(function () {
+            var getRandomGitlikeHash = function () {
+                // hat tip to http://stackoverflow.com/questions/10726909/random-alpha-numeric-string-in-javascript/10727155#10727155
+                function randomString(length, chars) {
+                    var result = '';
+                    for (var i = length; i > 0; --i) result += chars[Math.round(Math.random() * (chars.length - 1))];
+                    return result;
+                }
+
+                return randomString(40, '0123456789abcdef');
+            }
+            var hash = getRandomGitlikeHash();
+
+            $('.hash').text(hash);
+            $('.talkspace').attr('src', 'https://appear.in/' + hash);
+
+
+            window.isAppearinCompatibility(function (result) {
+                if (result === true) {
+                    $('#loader-text').text('Click here to talk');
+                    $('#appearin-loader').on('click', function () {
+                        $(this).find('.appearin-wrapper').empty().append('<iframe src="https://appear.in/'+ hash +'?lite" class="talkspace" frameborder="0"></iframe>');
+                    }).addClass('clickable');
+                }
+                else {
+                    $('#loader-text').text('Unsupported browser');
+                }
+            });
+        });
+        </script>
+
+    </body>
+</html>
