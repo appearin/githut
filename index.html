@@ -238,7 +238,7 @@ well for us, the developers and the end users.
 
 
 
-        <script src="http://iswebrtcready.appear.in/api.js"></script>
+        <script src="http://iswebrtcready.appear.in/apiv2.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
         <script>
@@ -259,8 +259,8 @@ well for us, the developers and the end users.
             $('.talkspace').attr('src', 'https://appear.in/' + hash);
 
 
-            window.isAppearinCompatibility(function (result) {
-                if (result === true) {
+            API.isAppearinCompatible(function (result) {
+                if (result.isSupported) {
                     $('#loader-text').text('Click here to talk');
                     $('#appearin-loader').on('click', function () {
                         $(this).find('.appearin-wrapper').empty().append('<iframe src="https://appear.in/'+ hash +'?lite" class="talkspace" frameborder="0"></iframe>');
